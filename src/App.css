@@ -1,0 +1,177 @@
+/* ===============================
+   Global Styles
+================================= */
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #5f2c82, #49a09d);
+}
+
+.app {
+  text-align: center;
+  padding: 40px;
+  color: white;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+/* ===============================
+   Filter Dropdown
+================================= */
+
+.filter {
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: none;
+  font-size: 14px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+/* ===============================
+   Layout
+================================= */
+
+.card-container {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+
+.card-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+/* ===============================
+   Card Styles
+================================= */
+
+.card {
+  width: 500px;
+  height: 350px;
+  position: relative;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease;
+}
+
+.card.flipped {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  padding: 20px;
+  backface-visibility: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  background: white;
+  color: black;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+/* Flip back side */
+.card-back {
+  transform: rotateY(180deg);
+}
+
+/* ===============================
+   Status Colors
+================================= */
+
+/* 🟡 Review */
+.card.review .card-front,
+.card.review .card-back {
+  background: #fff3b0;
+}
+
+/* 🟢 Learned */
+.card.learned .card-front,
+.card.learned .card-back {
+  background: #b9f6ca;
+}
+
+/* ===============================
+   Scrollable Code Block
+================================= */
+
+.code-container {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  padding-right: 5px;
+}
+
+.code-container pre {
+  margin: 0;
+  white-space: pre-wrap;
+  font-family: "Courier New", monospace;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* Scrollbar Styling */
+
+.code-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.code-container::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0.3);
+  border-radius: 4px;
+}
+
+.code-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* ===============================
+   Buttons
+================================= */
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.review-btn {
+  background: orange;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s ease;
+}
+
+.complete-btn {
+  background: green;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s ease;
+}
+
+.review-btn:hover,
+.complete-btn:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
+}
