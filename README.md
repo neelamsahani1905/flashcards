@@ -17,7 +17,7 @@ An interactive React-based flashcards application designed for efficient learnin
 
 ## 📂 Installation & Setup
 1. Clone the repository:
-   git clone https://github.com/yourusername/flashcards.git
+   git clone https://github.com/neelamsahani1905/flashcards.git
 
 2. Navigate to the project folder:
    cd flashcards
@@ -31,7 +31,7 @@ An interactive React-based flashcards application designed for efficient learnin
 ## 📸 Usage
 - Add new flashcards with questions and answers
 - Click on a card to flip and view the answer
-- Easily manage and organize cards
+- Manage and organize cards easily
 
 ## 🎯 Purpose
 This project was built to enhance learning efficiency through interactive revision techniques.
